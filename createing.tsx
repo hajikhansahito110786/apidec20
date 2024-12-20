@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { useState } from "react";
-import {useHistory} from "react-router-dom";
+
 
 
 const Createing = () => {
@@ -10,7 +10,7 @@ const Createing = () => {
     const [body,setBody]=useState('')
    const [author,setAuthor]=useState('hk')
    const [ispending,setIspending]=useState(false)
-const history=useHistory();
+
 
     const handleSubmit=(e:any)=>{
 
@@ -24,7 +24,7 @@ headers:{'Content-Type':'application/json'},
 body:JSON.stringify(blog)
 }).then(()=>{console.log("added");
 //history.go(-1);
-history.go('/');
+//history.go('/');
 })
 
     }
